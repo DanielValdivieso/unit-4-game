@@ -1,0 +1,42 @@
+body{
+    background: url("../images/back.jpg") no-repeat;
+}
+h1 {
+    text-align: center;
+}
+
+h5 {
+    text-align: center;
+    font-weight: bold;
+    color: #ffff;
+}
+
+h6 {
+    text-align: center;
+}
+
+.card-title {
+    background: gray;
+    height: 50px;
+    padding: 15px;
+    text-align: center;
+}
+
+.card-body {
+    padding: 0px;
+    margin: 5px;
+    text-align: center;
+}
+
+.foo-low {
+    background: gray;
+}
+.crystal{
+    /* background: rgba(169, 169, 169, 0.082); */
+    margin: 2px;
+    border-width: 1px;
+    border-style: solid;
+    padding: 10px;
+    display: inline-block;
+    vertical-align: middle;
+}

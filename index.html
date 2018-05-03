@@ -4,9 +4,11 @@
 
 <head>
     <title>Crystal Collectors Game</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
         crossorigin="anonymous">
     <link href="assets/css/style.css" rel="stylesheet">
+    <script defer src="assets/javascript/game.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -18,51 +20,51 @@
         </div>
     </div>
     <div class="container">
-        <!-- Content here -->
         <div class="row">
             <div class="col">
                 <div class="card-body">
                     <h5 class="card-title">YOUR SCORE</h5>
-                    <p class="card-text score">Score</p>
+                    <p class="card-text" id="score">Score</p>
                 </div>
             </div>
             <div class="col">
                 <div class="card-body">
                     <h5 class="card-title">YOUR TARGET</h5>
-                    <p class="card-text target">Target</p>
+                    <p class="card-text" id="target">Target</p>
                 </div>
             </div>
             <div class="col">
                 <div class="card-body">
                     <h5 class="card-title">WINS-LOSSES</h5>
-                    <p class="card-text wins">Wins</p>
-                    <p class="card-text losses">Losses</p>
+                    <p class="card-text" id="wins">Wins</p>
+                    <p class="card-text" id="losses">Losses</p>
                 </div>
             </div>
         </div>
         <br>
+        <br>
         <div class="row">
             <div class="col">
-                <img src="assets/images/Crystal_1.png" class="img-fluid img-thumbnail btn btn" alt="">
+                <img src="assets/images/Crystal_1.png" id="Cry1" class="img-fluid img-thumbnail btn btn" alt="Cry1">
             </div>
             <div class="col">
-                <img src="assets/images/Crystal_2.png" class="img-fluid img-thumbnail btn btn" alt="">
+                <img src="assets/images/Crystal_2.png" id="Cry2" class="img-fluid img-thumbnail btn btn" alt="Cry2">
             </div>
             <div class="col">
-                <img src="assets/images/Crystal_3.png" class="img-fluid img-thumbnail btn btn" alt="">
+                <img src="assets/images/Crystal_3.png" id="Cry3" class="img-fluid img-thumbnail btn btn" alt="Cry3">
             </div>
             <div class="col">
-                <img src="assets/images/Crystal_4.png" class="img-fluid img-thumbnail btn btn" alt="">
+                <img src="assets/images/Crystal_4.png" id="Cry4" class="img-fluid img-thumbnail btn btn" alt="Cry4">
             </div>
         </div>
         <br>
+        <br>
     </div>
 </body>
+
 <footer>
-    <div class="row foo-low">
-        <div class="col-lg-12">
-            <h6>2018</h6>
-        </div>
+    <div class="footer">
+        <h6>2018</h6>
     </div>
 </footer>
 

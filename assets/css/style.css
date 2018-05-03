@@ -12,14 +12,21 @@ h5 {
 }
 
 h6 {
-    text-align: center;
+    color: white;
 }
 
 .card-title {
-    background: gray;
-    height: 50px;
-    padding: 15px;
+    background: rgb(12,2,43);
+    height: 45px;
+    padding: 10px;
     text-align: center;
+}
+.card-text{
+    background: rgba(255, 255, 255, 0.712);
+    height: 45px;
+    padding: 10px;
+    text-align: center;
+
 }
 
 .card-body {
@@ -28,15 +35,29 @@ h6 {
     text-align: center;
 }
 
-.foo-low {
-    background: gray;
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width:100%;
+    height: 50px;
+    padding: 15px;
+    background-color: rgb(12,2,43);
+    color: white;
+    text-align: center;
+
 }
 .crystal{
-    /* background: rgba(169, 169, 169, 0.082); */
     margin: 2px;
     border-width: 1px;
     border-style: solid;
     padding: 10px;
     display: inline-block;
     vertical-align: middle;
+}
+.jumbotron{
+    width: 100%;
+    background-color:rgb(12, 2, 43);
+    color: white;
+    
 }

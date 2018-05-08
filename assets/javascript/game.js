@@ -5,67 +5,101 @@
 // Each time when the game starts, the game will change the values of each crystal
 
 
-//Random Number Target
-var wins = 0;
-var losses = 0;
-
-var target = getRandomInt();
-
-function getRandomInt() {
-    return Math.floor(Math.random() * 1001 + 1);
-}
-document.getElementById("target").innerText = target;
-console.log(Math.random)
-
-
-$(document).ready(function () {
-
-
-
-    $("#Cry1").click(function () {
-        score = score + Cry1;
-        $('#score').text(target)
-        if (target == Random) {
-            wins();
-        }
-        else if (target > Random) {
-            losses();
-        }
-
-    });
-
-    $("#Cry2").click(function () {
-        score = score + Cry2;
-        $('#score').text(target)
-        if (target == Random) {
-            wins();
-        }
-        else if (target > Random) {
-            losses();
-        }
-    });
-
-    $("#Cry3").click(function () {
-        score = score + Cry3;
-        $('#score').text(target)
-        if (target == Random) {
-            wins();
-        }
-        else if (target > Random) {
-            losses();
-        }
-    });
-
-    $("#Cry4").click(function () {
-        score = score + Cry4;
-        $('#score').text(target)
-        if (target == Random) {
-            wins();
-        }
-        else if (target > Random) {
-            losses();
-        }
-    });
-
-});
+$( document ).ready(function(){
+    // Generates random number to guess
+    var Random=Math.floor(Math.random()*1001+1)
+    
+    // Display random number
+    $('#target').text(Random);
+    
+    //Generate random number for each crystal
+    var num1= Math.floor(Math.random()*102+1)
+    var num2= Math.floor(Math.random()*102+1)
+    var num3= Math.floor(Math.random()*102+1)
+    var num4= Math.floor(Math.random()*102+1)
+    
+    // Variables to keep track of wins, losses and total
+    var playerTotal= 0; 
+    var wins= 0;
+    var losses = 0;
+    
+  
+  $('#wins').text(wins);
+  $('#losses').text(losses);
+  
+  // Reset game
+  function reset(){
+        Random=Math.floor(Math.random()*102+1);
+        console.log(Random)
+        $('#target').text(Random);
+        num1= Math.floor(Math.random()*12+1);
+        num2= Math.floor(Math.random()*12+1);
+        num3= Math.floor(Math.random()*12+1);
+        num4= Math.floor(Math.random()*12+1);
+        playerTotal= 0;
+        $('#score').text(playerTotal);
+        } 
+  // Display wins
+  function woohoo(){
+  alert("You won!");
+    wins++; 
+    $('#wins').text(wins);
+    reset();
+  }
+  // Display losses
+  function loser(){
+  alert ("Sorry! You lose!");
+    losses++;
+    $('#losses').text(losses);
+    reset()
+  }
+  // Clicking crystals
+    $('#Cry1').on ('click', function(){
+      playerTotal = playerTotal + num1;
+      console.log("New playerTotal= " + playerTotal);
+      $('#score').text(playerTotal); 
+            //Win & lose conditions
+          if (playerTotal == Random){
+            woohoo();
+          }
+          else if ( playerTotal > Random){
+            loser();
+          }   
+    })  
+    $('#Cry2').on ('click', function(){
+      playerTotal = playerTotal + num2;
+      console.log("New playerTotal= " + playerTotal);
+      $('#score').text(playerTotal); 
+          if (playerTotal == Random){
+            woohoo();
+          }
+          else if ( playerTotal > Random){
+            loser();
+          } 
+    })  
+    $('#Cry3').on ('click', function(){
+      playerTotal = playerTotal + num3;
+      console.log("New playerTotal= " + playerTotal);
+      $('#score').text(playerTotal);
+  
+            if (playerTotal == Random){
+            woohoo();
+          }
+          else if ( playerTotal > Random){
+            loser();
+          } 
+    })  
+    $('#Cry4').on ('click', function(){
+      playerTotal = playerTotal + num4;
+      console.log("New playerTotal= " + playerTotal);
+      $('#score').text(playerTotal); 
+        
+            if (playerTotal == Random){
+            woohoo();
+          }
+          else if ( playerTotal > Random){
+            loser();
+          }
+    });   
+  }); 
 
